@@ -1,5 +1,4 @@
-Implementation of The MT-FiLM Piano Transcription
-
+Implementation of The MTL-FiLM Piano Transcription
 
 Tutorials
 
