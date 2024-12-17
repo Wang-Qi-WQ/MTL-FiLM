@@ -231,7 +231,7 @@ def piano_transcription(model, spectrum, device, block_stride=0.5, schedule_idx=
     top_k = 2
     spectrum = spectrum.to(device)
     frames, frequency_bins = spectrum.shape
-    block_len = 16 * 200
+    block_len = 400
     pad = (0, 0, 0, block_len - (frames % block_len) if (frames % block_len) != 0 else 0)
     spectrum = F.pad(spectrum, pad)
     spectrum = spectrum.reshape(-1, block_len, frequency_bins)
