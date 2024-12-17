@@ -43,8 +43,8 @@ def init_model(model, model_path, ckp, on_cpu=False):
         device_ids = [i for i in range(0, torch.cuda.device_count())]
         device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
         model = model.to(device)
-        if (device.type != 'cpu') and (torch.cuda.device_count() > 1):
-            model = nn.DataParallel(model, device_ids=device_ids)
+        # if (device.type != 'cpu') and (torch.cuda.device_count() > 1):
+            # model = nn.DataParallel(model, device_ids=device_ids)
 
         model.load_state_dict(checkpoint.reload_dict(model.state_dict(), pretrained_info.model_dict))
         model.eval()
