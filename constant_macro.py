@@ -97,3 +97,10 @@ EVA_ONS_TH = []  # thresholds list for threshold grid searching.
 EVA_FRM_TH = []
 EVA_OFF_TH = []
 
+# MV3 Sustainpedal
+# EVA_FRM_TH = [0.52]
+# EVA_OFF_TH = [0.23]
+
+# MV3 Note
+# EVA_FRM_TH = [0.48]
+# EVA_ONS_TH = [0.4]
